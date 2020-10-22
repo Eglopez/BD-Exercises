@@ -22,7 +22,7 @@ USE EmpresaDB;
     ) CHARACTER SET utf8;
     CREATE TABLE IF NOT EXISTS Lista(
         id INT AUTO_INCREMENT PRIMARY KEY,
-        id_usuario INT NOT NULL
+        id_usuario INT NOT NULL,
         nombre TEXT NOT NULL,
         creacion TIMESTAMP DEFAULT NOW(),
         actualizacion TIMESTAMP DEFAULT NOW() ON UPDATE NOW(),
@@ -34,5 +34,5 @@ USE EmpresaDB;
         descripcion TEXT NOT NULL,
         creaciion TIMESTAMP DEFAULT NOW(),
         actualizacion TIMESTAMP DEFAULT NOW() ON UPDATE NOW(),
-        estado ENUM('completada','incompleta')
+        estado ENUM('completada','no completada') DEFAULT 'no completada'
     ) CHARACTER SET utf8;
